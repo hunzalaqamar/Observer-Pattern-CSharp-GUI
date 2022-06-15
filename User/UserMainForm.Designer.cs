@@ -104,10 +104,10 @@
             // 
             // rtb_headlines
             // 
-            this.rtb_headlines.Enabled = false;
             this.rtb_headlines.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rtb_headlines.Location = new System.Drawing.Point(12, 63);
             this.rtb_headlines.Name = "rtb_headlines";
+            this.rtb_headlines.ReadOnly = true;
             this.rtb_headlines.Size = new System.Drawing.Size(664, 554);
             this.rtb_headlines.TabIndex = 19;
             this.rtb_headlines.Text = "";

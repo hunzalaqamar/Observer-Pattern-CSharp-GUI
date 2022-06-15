@@ -45,7 +45,7 @@ namespace SCD_LAB_W14
             bool loginFlag = false;
             if (txt_username.Text.ToString().Equals("") || txt_password.Text.ToString().Equals(""))
             {
-                MessageBox.Show("Invalid Login Credientials", "Error");
+                MessageBox.Show("Invalid Login Credientials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -53,7 +53,7 @@ namespace SCD_LAB_W14
                 {
                     if(txt_username.Text.ToString().Equals(logincreds[i].Username) && txt_password.Text.ToString().Equals(logincreds[i].Password))
                     {
-                        MessageBox.Show("Welcome User " + logincreds[i].Username);
+                        MessageBox.Show("Welcome User " + logincreds[i].Username, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         UserMainForm UMF = new UserMainForm(logincreds[i]);
                         this.Hide();
                         UMF.Show();
@@ -65,14 +65,14 @@ namespace SCD_LAB_W14
                 {
                     if (txt_username.Text.ToString().Equals(logincreds[4].Username) && txt_password.Text.ToString().Equals(logincreds[4].Password))
                     {
-                        MessageBox.Show("Welcome Admin " + logincreds[4].Username);
+                        MessageBox.Show("Welcome Admin " + logincreds[4].Username, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         AdminMainForm AMF = new AdminMainForm();
                         this.Hide();
                         AMF.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Login Credientials", "Error");
+                        MessageBox.Show("Invalid Login Credientials", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

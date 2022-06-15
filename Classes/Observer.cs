@@ -18,7 +18,7 @@ namespace SCD_LAB_W14.Classes
 
         public void update(string newstype)
         {
-            MessageBox.Show("Hello " + UserName + ", News Related to " + newstype + " Has Arrived");
+            MessageBox.Show("Hello " + UserName + ", News Related to " + newstype + " Has Arrived", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

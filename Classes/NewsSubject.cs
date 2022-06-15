@@ -23,6 +23,7 @@ namespace SCD_LAB_W14.Classes
         }
         public NewsSubject(string newstype, string newsdetails)
         {
+            NDTO = new NewsDTO();
             NDTO.Newstype = newstype;
             NDTO.Newsdetails = newsdetails;
             AllNews.Add(NDTO);
@@ -30,10 +31,10 @@ namespace SCD_LAB_W14.Classes
 
         public void addNews(string newstype, string newsdetails)
         {
+            NDTO = new NewsDTO();
             NDTO.Newsdetails = newsdetails;
             NDTO.Newstype = newstype;
             AllNews.Add(NDTO);
-            //MessageBox.Show(newstype, newsdetails);
         }
 
         
@@ -52,11 +53,7 @@ namespace SCD_LAB_W14.Classes
         }
         public void RegisterObserver(INewsObserver observer)
         {
-            MessageBox.Show("Observer Added : " + ((Observer)observer).UserName);
-            observers.Add(observer);
-        }
-        public void AddObservers(INewsObserver observer)
-        {
+            MessageBox.Show("Observer " + ((Observer)observer).UserName + " Added For News" , "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             observers.Add(observer);
         }
         public void RemoveObserver(INewsObserver observer)
